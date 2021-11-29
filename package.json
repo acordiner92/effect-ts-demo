@@ -1,0 +1,39 @@
+{
+  "name": "effect-ts-demo",
+  "version": "1.0.0",
+  "description": "testing out effect-ts",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pnpm exec swc src/ -w -d dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acordiner92/effect-ts-demo.git"
+  },
+  "author": "Andrew Cordiner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acordiner92/effect-ts-demo/issues"
+  },
+  "homepage": "https://github.com/acordiner92/effect-ts-demo#readme",
+  "dependencies": {
+    "@effect-ts/core": "^0.47.0"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.52",
+    "@swc/core": "^1.2.113",
+    "@swc/jest": "^0.2.10",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "chokidar": "^3.5.2",
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.3.1",
+    "prettier": "^2.5.0",
+    "typescript": "^4.5.2"
+  }
+}
