@@ -1,9 +1,15 @@
 import { pipe } from '@effect-ts/core/Function';
 import * as T from '@effect-ts/core/Effect';
-import { info, live, ConsoleService } from './infrastructure/ConsoleService';
+import {
+  ConsoleServiceLive,
+  ConsoleService,
+  info,
+} from './infrastructure/ConsoleService';
 
-const logToStdout = () => info('hello world');
+const logToStdout = () => {
+  return info('hello world');
+};
 
 const program = logToStdout();
 
-pipe(program, T.provideService(ConsoleService)(live), T.runPromise);
+pipe(program, T.repeatN(2), T.provideLayer(ConsoleServiceLive), T.runPromise);
